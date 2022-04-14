@@ -1,0 +1,517 @@
+/*******************
+*                  *
+*   Global Style   *
+*                  *
+********************/
+
+/* colors */
+:root {
+    --bg-yellow-1   : #FFDE57;
+    --bg-yellow-2   : #FB9D3A;
+    --text-yellow   : #F3AC47;
+    --bg-dark       : #1E252B;
+    --text-color    : #EDEEF2;
+    --divider-bg    : #2A333D;
+    --card-bg       : #222A31 
+}
+
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Red+Hat+Display:wght@700&family=Reenie+Beanie&family=Roboto:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Red+Hat+Display:wght@700&family=Reenie+Beanie&family=Roboto:wght@400;700&display=swap'); */
+
+/*
+
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Reenie Beanie', cursive;
+font-family: 'Roboto', sans-serif;
+*/
+
+
+/* HTML5 display-role reset for older browsers */
+
+@media screen and (min-width: 1536px){
+    .container {
+        max-width: 1536px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, img, b, i,
+ol, ul, li, form{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+a {
+    text-decoration: none;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: var(--text-color);
+    background-color: var(--bg-dark);
+    height: 3000px;
+}
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h2 {
+    font-size: 5rem;
+    line-height: 6rem;
+    font-weight: bold;
+}
+
+.btn { 
+    font-size: .9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #FFF;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    border-radius: .5rem;
+    background: linear-gradient(267.45deg, var(--bg-yellow-1) -4.9%, var(--bg-yellow-2) 207.52%);
+}
+
+.btn:hover {
+    color: #FFF;
+}
+
+.btn-outline {
+    background: transparent;
+    outline: 1px solid var(--text-color);
+}
+hr {
+    background-color: var(--divider-bg);
+    height: 1.25px;
+    margin: 5rem 0 !important;
+}
+
+.navbar-brand {
+    font-size: 3.2rem;
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(89.2deg, #F3AC46 -23.5%, #FED654 56.29%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.navbar-brand span {
+    font-family: 'Reenie Beanie', cursive;
+}
+
+section {
+    padding: 5rem 0;
+    position: relative;
+}
+
+footer {position: relative;}
+
+section::after, footer::after {
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    content: '';
+    width: 90%;
+    height: 1px;
+    background-color: var(--divider-bg);
+}
+/*******************
+*                  *
+*   Header Style   *
+*                  *
+********************/
+
+header .navbar-light .navbar-nav .nav-link,
+header .navbar-light .navbar-nav .nav-link.active{
+    color: #FFF;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+header .navbar-light .navbar-nav .nav-link:hover {
+    color: var(--text-yellow);
+}
+header .navbar-light .navbar-nav .nav-item:not(:last-child) {
+    margin-right: 3.864rem;
+}
+
+
+/*******************
+*                  *
+*   Home Style     *
+*                  *
+********************/
+#home {
+    min-height: 85vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+#home .home-info span {
+    color: #86A0C2;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1rem;
+    font-weight: bold;
+}
+
+#home .home-info h1 {
+    font-size: 5.5rem;
+    line-height: 6rem;
+    color: var(--text-color);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+#home .home-info p {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+#home .home-img {
+    padding: 15rem;
+    background-image: url('/images/home-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#home .home-info a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+#home .home-info .btn {
+    font-size: 1.125rem;
+}
+#home .home-info .btn span {
+    font-size: 1rem;
+    color: #FFF;
+}
+
+@media screen and (min-width: 1199px){
+    #home .home-img {
+        background-position: 80px bottom;
+    }
+}
+
+/*******************
+*                  *
+*   stat Style     *
+*                  *
+********************/
+#statistics {
+    padding: 10rem 0 5rem;
+}
+
+#statistics h4{
+    font-size: 4.8rem;
+    line-height: 4rem;
+    font-weight: bold;
+    font-family: 'Red Hat Display', sans-serif;
+    background: linear-gradient(89.3deg, var(--bg-yellow-2) 0.33%, var(--bg-yellow-1) 63.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+#statistics p {
+    margin-left: -1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+#statistics .stat {
+    position: relative;
+}
+
+#statistics  .stat::before {
+    position: absolute;
+    content: '';
+    width: 11.5rem;
+    height: 11.5rem;
+    top: -6rem;
+    left: 2rem;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#statistics .row .col-12:first-of-type .stat::before {
+    background-image: url('/images/person.svg');
+}
+
+#statistics .row .col-12:nth-of-type(2) .stat:before {
+    background-image: url('/images/gift.svg');
+}
+
+#statistics .row .col-12:last-of-type .stat:before {
+    background-image: url('/images/check-shield.svg');
+}
+
+/***************************
+*                          *
+*   how it works Style     *
+*                          *
+****************************/
+
+#how-it-works h2 span {
+    background: linear-gradient(89.3deg, var(--bg-yellow-2) 0.33%, var(--bg-yellow-1) 63.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+
+/*******************
+*                  *
+*   Pricing Style   *
+*                  *
+********************/
+#pricing .card {
+    padding: 0 1rem 2rem 1rem;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+}
+
+#pricing .head,
+#pricing .price{
+    padding: 2rem 0 1rem ;
+    border-bottom: 1px solid var(--divider-bg);
+}
+
+#pricing .head h4{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-yellow);
+}
+
+#pricing .price {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: var(--text-color)
+}
+
+#pricing .price span{
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-color)
+}
+
+#pricing .features{
+    padding-top: 2rem;
+}
+
+#pricing .features li{
+    position: relative;
+    text-align: left;
+    padding-left: 3rem;
+    margin-bottom: .5rem;
+}
+
+#pricing .features li::before{
+    position: absolute;
+    content: '';
+    top: 10px;
+    left: 20px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--text-yellow);
+
+}
+
+#pricing .card {
+    min-height: 430px;
+}
+
+.owl-carousel .owl-dots  {
+    margin-top: 3rem;
+}
+
+.owl-carousel button.owl-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #363E47;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.owl-carousel button.owl-dot.active {
+    background-color: var(--text-yellow);
+}
+
+
+
+/*******************
+*                  *
+*   contact Style   *
+*                  *
+********************/
+#contact-us {
+    position: relative;
+    padding: 10rem  0;
+}
+
+#contact-us::before{
+    position: absolute;
+    content: '';
+    top: 30%;
+    right: 50%;
+    margin-right: -6.75rem;
+    z-index: -1;
+    width: 13.5rem;
+    height: 13.5rem;
+    background-image: url('/images/Vector.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#contact-us a {
+    color: var(--text-yellow);
+}
+
+/*******************
+*                  *
+*   contact Style   *
+*                  *
+********************/
+footer p, .copyright p {
+    font-size: .9rem;
+    line-height: 1.25rem;
+}
+
+/* Mobile screen */
+
+@media screen and (max-width: 768px){
+    section {
+        padding: 3rem 0;
+    }
+
+    section::after, footer::after {
+        width: 100%;
+        left: 0;
+    }
+
+    #home::after {
+        bottom: -20px;
+    }
+
+    #home {
+        background-image: url('/images/home-mobile.png');
+        background-size: cover;
+        background-size: 100% 115%;
+        background-repeat: no-repeat;
+        background-position-y: -30px;
+        
+    } 
+
+    #home .home-img {display: none;} 
+    
+
+    #home .home-info h1 {
+        font-size: 2.75rem;
+        line-height: 3rem;
+    }
+    #home .home-info p {
+        font-size: .9rem;
+        line-height: 1.5rem;
+    }
+
+    #statistics {
+        padding-top: 10rem;
+    }
+
+    #statistics .row .col-12:not(:last-of-type) .stat {
+        margin-bottom: 10rem;        
+    } 
+
+    #statistics .stat h4 {
+        font-size: 3.125rem;
+    }
+    
+    #statistics .stat::before {
+        left: 23%;
+    }
+
+    h2 {
+        font-size: 3.438rem;
+        line-height: 3.75rem;
+    }
+
+    #contact-us {
+        padding: 8rem 0;
+    }
+}
+
+@media screen and  (max-width: 991px){
+    #home .home-info .btn {
+        display: flex !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #home .home-img {
+        padding: 21rem;
+    }
+}
+@media screen and (max-width: 1440px){
+    html {
+        font-size: 16px;
+    }
+
+    
+}
+
+@media screen and (min-width: 1440px){
+    #pricing .card {
+        min-height: 530px;
+    }
+    
+}
